@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Docker.ChromeTest1">
+      <class name="Docker.SetUpDockerGrid">
         <methods>
-          <include name="Test"/>
+          <include name="stopDockerGrid"/>
+          <include name="startDockerGrid"/>
         </methods>
-      </class> <!-- Docker.ChromeTest1 -->
+      </class> <!-- Docker.SetUpDockerGrid -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
