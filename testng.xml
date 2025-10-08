@@ -2,6 +2,8 @@
 <suite name="Suite" parallel="classes">
   <test thread-count="5" name="Test">
     <classes>
+      <!-- class name="Docker.SetUpDockerGrid"/--> 
+      <!-- This just launches the bat file for running and stopping docker -->
       <class name="Docker.FireFoxTest4"/>
       <class name="Docker.ChromeTest1"/>
       <class name="Docker.ChromeTest3"/>

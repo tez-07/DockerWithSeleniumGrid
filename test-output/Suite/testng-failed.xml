@@ -3,26 +3,26 @@
 <suite parallel="classes" name="Failed suite [Suite]">
   <test thread-count="5" parallel="classes" name="Test(failed)">
     <classes>
-      <class name="Docker.ChromeTest3">
-        <methods>
-          <include name="Test"/>
-        </methods>
-      </class> <!-- Docker.ChromeTest3 -->
       <class name="Docker.ChromeTest2">
         <methods>
           <include name="Test"/>
         </methods>
       </class> <!-- Docker.ChromeTest2 -->
-      <class name="Docker.FireFoxTest4">
-        <methods>
-          <include name="Test"/>
-        </methods>
-      </class> <!-- Docker.FireFoxTest4 -->
       <class name="Docker.ChromeTest1">
         <methods>
           <include name="Test"/>
         </methods>
       </class> <!-- Docker.ChromeTest1 -->
+      <class name="Docker.FireFoxTest4">
+        <methods>
+          <include name="Test"/>
+        </methods>
+      </class> <!-- Docker.FireFoxTest4 -->
+      <class name="Docker.ChromeTest3">
+        <methods>
+          <include name="Test"/>
+        </methods>
+      </class> <!-- Docker.ChromeTest3 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

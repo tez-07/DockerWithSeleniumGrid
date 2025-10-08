@@ -2,6 +2,8 @@ package Docker;
 
 import java.io.IOException;
 
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class SetUpDockerGrid {
@@ -18,6 +20,7 @@ public class SetUpDockerGrid {
         }
     }
 
+	
     private String getStopCommand() {
         if (OS.contains("mac")) {
             return "/bin/bash ./stop_dockergrid.sh"; 								// MacOS ARM64
@@ -28,23 +31,23 @@ public class SetUpDockerGrid {
         }
     }
 
-    @Test(priority = 1)
+	@Test(priority=1)
     public void startDockerGrid() {
         try {
             System.out.println("Starting Docker Grid for OS: " + OS);
             Runtime.getRuntime().exec(getStartCommand());
-            Thread.sleep(2000); 													// wait for grid to start
+            Thread.sleep(20000); 													// wait for grid to start
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
     }
 
-    @Test(priority = 2)
+    @Test(priority=2)
     public void stopDockerGrid() {
         try {
             System.out.println("Stopping Docker Grid for OS: " + OS);
             Runtime.getRuntime().exec(getStopCommand());
-            Thread.sleep(5000); 													// wait for grid to stop
+            Thread.sleep(20000); 													// wait for grid to stop
 
             // Only needed for Windows
             if (OS.contains("win")) {
@@ -53,8 +56,7 @@ public class SetUpDockerGrid {
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
-    }
-		
+    }		
 }
 
 
